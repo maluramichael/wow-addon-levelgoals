@@ -1,0 +1,13 @@
+## Interface: 20505
+## Title: LevelGoals
+## Notes: Track your leveling progress with daily XP goals and deadlines
+## Author: Michael Malura
+## Version: 1.0.0
+## SavedVariables: LevelGoalsDB
+## OptionalDeps: Ace3
+
+embeds.xml
+
+Core.lua
+XPData.lua
+Config.lua
