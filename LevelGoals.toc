@@ -3,6 +3,7 @@
 ## Notes: Track your leveling progress with daily XP goals and deadlines
 ## Author: Michael Malura
 ## Version: 1.0.1
+## X-Curse-Project-ID: 1448657
 ## IconTexture: Interface\Icons\INV_Misc_Book_09
 ## Category-enUS: Quests & Leveling
 ## Category-deDE: Quests & Aufwertung
