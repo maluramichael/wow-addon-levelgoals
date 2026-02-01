@@ -1,4 +1,4 @@
-## Interface: 11508, 20505
+## Interface: 20505
 ## Title: |cFF00D1FFMM|r LevelGoals
 ## Notes: Track your leveling progress with daily XP goals and deadlines
 ## Author: Michael Malura
