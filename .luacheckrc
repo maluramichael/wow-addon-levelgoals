@@ -4,10 +4,17 @@ quiet = 1
 max_line_length = false
 exclude_files = { ".release/", "libs/", "Libs/" }
 
-globals = { "LevelGoals" }
+ignore = {
+    "21.",          -- All unused variable warnings (W211, W212, W213)
+    "231",          -- Variable never accessed
+    "311",          -- Value assigned to variable is unused
+    "631",          -- Line too long
+}
+
+globals = { "_G", "LevelGoals" }
 
 read_globals = {
-    "_G", "LibStub",
+    "LibStub",
     "CreateFrame", "UIParent", "GameTooltip", "Settings",
     "UnitLevel", "UnitXP", "UnitXPMax", "GetTime",
     "InterfaceOptionsFrame_OpenToCategory",
