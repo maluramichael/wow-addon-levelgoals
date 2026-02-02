@@ -18,6 +18,7 @@ read_globals = {
     "CreateFrame", "UIParent", "GameTooltip", "Settings",
     "UnitLevel", "UnitXP", "UnitXPMax", "GetTime",
     "InterfaceOptionsFrame_OpenToCategory",
+    "C_AddOns", "C_Timer",
     "pairs", "ipairs", "select", "string", "table", "math", "format",
-    "tonumber", "tostring", "type", "unpack",
+    "tonumber", "tostring", "type", "unpack", "date", "time",
 }
