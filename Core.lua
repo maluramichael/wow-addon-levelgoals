@@ -17,7 +17,7 @@ local defaults = {
         targetDay = 15,
         targetMonth = 2,
         targetYear = 2026,
-        showOnLogin = true,
+        windowVisible = true,
         windowLocked = false,
         windowPoint = { "CENTER", nil, "CENTER", 0, 0 },
         compactPoint = { "CENTER", nil, "CENTER", 0, 100 },
@@ -59,9 +59,13 @@ function LevelGoals:OnEnable()
     -- Check if we need to start a new session (new day or first time)
     self:CheckAndInitSession()
 
-    if self.db.profile.showOnLogin then
+    if self.db.profile.windowVisible then
         C_Timer.After(2, function()
-            self:ShowMainFrame()
+            if self.db.profile.compactMode then
+                self:ShowCompactFrame()
+            else
+                self:ShowMainFrame()
+            end
         end)
     end
 end
@@ -604,7 +608,8 @@ end
 function LevelGoals:ShowMainFrame()
     if self.mainFrame then
         self.db.profile.compactMode = false
-        self:HideCompactFrame()
+        self.db.profile.windowVisible = true
+        if self.compactFrame then self.compactFrame:Hide() end
         self.mainFrame:Show()
         self:UpdateDisplay()
     end
@@ -612,6 +617,7 @@ end
 
 function LevelGoals:HideMainFrame()
     if self.mainFrame then
+        self.db.profile.windowVisible = false
         self.mainFrame:Hide()
     end
 end
@@ -619,7 +625,8 @@ end
 function LevelGoals:ShowCompactFrame()
     if self.compactFrame then
         self.db.profile.compactMode = true
-        self:HideMainFrame()
+        self.db.profile.windowVisible = true
+        if self.mainFrame then self.mainFrame:Hide() end
         self.compactFrame:Show()
         self:UpdateCompactDisplay()
     end
@@ -627,6 +634,7 @@ end
 
 function LevelGoals:HideCompactFrame()
     if self.compactFrame then
+        self.db.profile.windowVisible = false
         self.compactFrame:Hide()
     end
 end

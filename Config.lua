@@ -18,13 +18,25 @@ function LevelGoals:GetOptionsTable()
                 order = 10,
             },
 
-            showOnLogin = {
+            windowVisible = {
                 type = "toggle",
-                name = "Show on Login",
-                desc = "Automatically show the progress window when you log in.",
+                name = "Show Window",
+                desc = "Show or hide the progress window. This state is remembered across sessions.",
                 order = 11,
-                get = function() return self.db.profile.showOnLogin end,
-                set = function(_, val) self.db.profile.showOnLogin = val end,
+                get = function() return self.db.profile.windowVisible end,
+                set = function(_, val)
+                    self.db.profile.windowVisible = val
+                    if val then
+                        if self.db.profile.compactMode then
+                            self:ShowCompactFrame()
+                        else
+                            self:ShowMainFrame()
+                        end
+                    else
+                        self:HideMainFrame()
+                        self:HideCompactFrame()
+                    end
+                end,
             },
 
             windowLocked = {
