@@ -2,7 +2,7 @@
 ## Title: |cFF00D1FFMM|r LevelGoals
 ## Notes: Track your leveling progress with daily XP goals and deadlines
 ## Author: Michael Malura
-## Version: 1.0.1
+## Version: 1.0.2
 ## X-Curse-Project-ID: 1448657
 ## IconTexture: Interface\Icons\INV_Misc_Book_09
 ## Category-enUS: Quests & Leveling
