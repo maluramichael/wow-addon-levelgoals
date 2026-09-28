@@ -3,6 +3,7 @@
 <!-- links:start -->
 [![Support me on Ko-fi](https://malura.de/assets/badge/kofi.svg)](https://malura.de/go/kofi?ref=wow-addon-levelgoals)
 [![Check out my page](https://malura.de/assets/badge/malura.svg)](https://malura.de/go/site?ref=wow-addon-levelgoals)
+[![CurseForge](https://malura.de/badge/curseforge/levelgoals.svg)](https://www.curseforge.com/wow/addons/levelgoals)
 <!-- links:end -->
 
 Ein WoW-Addon (TBC Classic), das mir beim Leveln sagt, wie viel XP ich heute noch machen muss, um bis zu einem festen Datum ein Ziellevel zu erreichen.
